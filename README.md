@@ -19,7 +19,7 @@ unix-based systems.
 
 `sudo make linux_x86` or `sudo make linux_x64`
 
-Run the application by `/usr/bin/skype_unofficial_client/skype` or through
+Run the application by `/opt/skype_unofficial_client/skype` or through
 searching for "Skype" in the main menu.
 
 ##### Developer Note
