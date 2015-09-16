@@ -1,12 +1,11 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
-Version=0.1
+Version=1.0
 Type=Application
-Terminal=false
-Icon[en]=skype
-Name[en]=Skype
-Exec=/usr/bin/skype_unofficial_client/skype
-Comment[en]=Skype Unofficial Client
 Name=Skype
-Comment=Skype Unofficial Client
-Icon=skype
+Comment=An unofficial client of Skype for Linux, running on top of Node Webkit.
+Icon=/opt/skype_unofficial_client/icon.png
+Exec=/opt/skype_unofficial_client/skype %U
+NoDisplay=false
+Categories=Network;
+StartupNotify=false
+Terminal=false

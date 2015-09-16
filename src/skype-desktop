@@ -1,3 +1,3 @@
 #!/bin/sh
-cd /usr/bin/skype_unofficial_client/
+cd /opt/skype_unofficial_client/
 ./skype
