@@ -4,6 +4,8 @@
 
 A unofficial client of Skype for Linux, running on top of Node Webkit.
 
+![](https://raw.githubusercontent.com/haskellcamargo/skype-unofficial-client/master/resource/example/demo.png)
+
 ##### Why?
 
 Because Skype native client for Linux sucks.
