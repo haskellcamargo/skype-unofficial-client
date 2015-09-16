@@ -8,7 +8,7 @@ An unofficial client of Skype for Linux, running on top of Node Webkit.
 
 ##### Why?
 
-Because Skype native client for Linux sucks.
+Because Skype native client for Linux sucks a lot.
 
 ##### Installation
 
@@ -24,5 +24,4 @@ searching for "Skype" in the main menu.
 
 ##### Developer Note
 
-The name "Skype", icon and logo are exclusively reserved properties of
-Microsoft.
+The Skype name, associated trade marks and logos and the "S" logo are trade marks of Skype or related entities.
