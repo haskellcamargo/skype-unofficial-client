@@ -2,7 +2,7 @@
 
 ##### What is this?
 
-A unofficial client of Skype for Linux, running on top of Node Webkit.
+An unofficial client of Skype for Linux, running on top of Node Webkit.
 
 ![](https://raw.githubusercontent.com/haskellcamargo/skype-unofficial-client/master/resource/example/demo.png)
 
