@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=0.1
+Type=Application
+Terminal=false
+Icon[en]=skype
+Name[en]=Skype
+Exec=/usr/bin/skype_unofficial_client/skype
+Comment[en]=Skype Unofficial Client
+Name=Skype
+Comment=Skype Unofficial Client
+Icon=skype
