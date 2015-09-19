@@ -13,7 +13,6 @@ linux_x64:
 	chmod +x -R /opt/skype_unofficial_client
 	cp $(SRC)/Skype.desktop /usr/share/applications
 	cp $(SRC)/skype-desktop /usr/bin
-	chmod +x $(SRC)/skype-desktop 
          
 linux_x86:
 	cp $(RESOURCE)/icon.png $(BIN)/linux_x86
@@ -23,5 +22,3 @@ linux_x86:
 	chmod +x -R /opt/skype_unofficial_client
 	cp $(SRC)/Skype.desktop /usr/share/applications
 	cp $(SRC)/skype-desktop /usr/bin
-	chmod +x $(SRC)/skype-desktop 
- 
