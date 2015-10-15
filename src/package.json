@@ -4,6 +4,7 @@
   "main": "https://web.skype.com/en/",
   "description": "Skype client built on top of node webkit",
   "keywords": ["skype", "linux", "web"],
+  "inject-js-start": "index.js",
   "window": {
     "title": "Skype",
     "icon": "skype.png",
