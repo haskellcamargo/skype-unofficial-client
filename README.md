@@ -24,4 +24,6 @@ searching for "Skype" in the main menu.
 
 ##### Developer Note
 
+Skype's Web client running on Node Webkit, doesn't currently support calls.
+
 The Skype name, associated trade marks and logos and the "S" logo are trade marks of Skype or related entities.
