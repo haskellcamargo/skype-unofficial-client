@@ -4,6 +4,7 @@
   "main": "https://web.skype.com/en/",
   "description": "Skype client built on top of node webkit",
   "keywords": ["skype", "linux", "web"],
+  "user-agent": "Mozilla/5.0 (X11; Linux x86) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36",
   "window": {
     "title": "Skype",
     "icon": "skype.png",
