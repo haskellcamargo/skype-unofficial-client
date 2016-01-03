@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "main": "https://web.skype.com/en/",
   "description": "Skype client built on top of node webkit",
-  "user-agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.73 Safari/537.36",
+  "user-agent": "Mozilla/5.0 (%osinfo; Trident/7.0; rv:11.0) like Gecko",
+  "chromium-args" : "--force-device-scale-factor=2",
   "keywords": ["skype", "linux", "web"],
   "window": {
     "title": "Skype",
