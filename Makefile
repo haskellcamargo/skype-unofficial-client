@@ -7,21 +7,19 @@ SRC = ./src
 PREFIX = 
 
 linux_x64:
-	cp $(RESOURCE)/skype.png $(PREFIX)/usr/share/icons/hicolor/512x512/apps/
-	cp $(SRC)/package.json $(BIN)/linux_x64
+	cp -p $(SRC)/package.json $(BIN)/linux_x64
 	mkdir -p $(PREFIX)/opt/skype_unofficial_client
-	cp -R $(BIN)/linux_x64/* $(PREFIX)/opt/skype_unofficial_client
+	cp -p -R $(BIN)/linux_x64/* $(PREFIX)/opt/skype_unofficial_client
 	chmod +x -R $(PREFIX)/opt/skype_unofficial_client
-	cp $(SRC)/Skype.desktop $(PREFIX)/usr/share/applications
+	cp -p $(SRC)/Skype.desktop $(PREFIX)/usr/share/applications
 	chmod +x $(SRC)/skype-desktop
-	cp $(SRC)/skype-desktop $(PREFIX)/usr/bin
+	cp -p $(SRC)/skype-desktop $(PREFIX)/usr/bin
          
 linux_x86:
-	cp $(RESOURCE)/skype.png $(PREFIX)/usr/share/icons/hicolor/512x512/apps/
-	cp $(SRC)/package.json $(BIN)/linux_x86
+	cp -p $(SRC)/package.json $(BIN)/linux_x86
 	mkdir -p $(PREFIX)/opt/skype_unofficial_client
-	cp -R $(BIN)/linux_x86/* $(PREFIX)/opt/skype_unofficial_client
+	cp -p -R $(BIN)/linux_x86/* $(PREFIX)/opt/skype_unofficial_client
 	chmod +x -R $(PREFIX)/opt/skype_unofficial_client
-	cp $(SRC)/Skype.desktop $(PREFIX)/usr/share/applications
+	cp -p $(SRC)/Skype.desktop $(PREFIX)/usr/share/applications
 	chmod +x $(SRC)/skype-desktop
-	cp $(SRC)/skype-desktop $(PREFIX)/usr/bin
+	cp -p $(SRC)/skype-desktop $(PREFIX)/usr/bin
