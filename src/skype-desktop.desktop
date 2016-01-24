@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Skype
+Comment=An unofficial client of Skype for Linux, running on top of Node Webkit.
+Icon=/opt/skype_unofficial_client/skype.png
+Exec=/opt/skype_unofficial_client/skype %U
+NoDisplay=false
+Categories=Network;
+StartupNotify=false
+Terminal=false
