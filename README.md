@@ -1,5 +1,5 @@
-### Skype Unofficial Client
-
+Skype Unofficial Client
+===
 ##### What is this?
 
 An unofficial client of Skype for Linux, running on top of Node Webkit.
@@ -19,10 +19,14 @@ unix-based systems.
 
 `sudo make linux_x86` or `sudo make linux_x64`
 
+For Arch Linux users, this application is currently available on [AUR](https://aur.archlinux.org/packages/skype-desktop-bin/). 
+
+`yaourt skype-desktop-bin `
+
 Run the application by `/opt/skype_unofficial_client/skype` or through
 searching for "Skype" in the main menu.
 
-##### Developer Note
+##### Developers Note
 
 Skype's Web client running on Node Webkit, doesn't currently support calls.
 

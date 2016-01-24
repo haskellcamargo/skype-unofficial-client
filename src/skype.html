@@ -1,0 +1,25 @@
+
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        overflow: hidden;
+      }
+      iframe {
+        border: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <script> 
+      var gui = require('nw.gui');                  // Load native UI library
+      var win = gui.Window.get();                  // Reference to window and tray
+    </script>   
+    <script src='./js/target.js'></script>     
+    <script src='./js/tray.js'></script>   
+  </head>
+  <body>
+    <iframe src="https://web.skype.com/en" nwdisable nwfaketop></iframe>
+  </body>
+</html>
