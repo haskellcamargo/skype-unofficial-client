@@ -1,3 +1,0 @@
-#!/bin/sh
-cd /opt/skype_unofficial_client/
-./skype --enable-spell-checking
