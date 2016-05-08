@@ -5,25 +5,27 @@
 RESOURCE = ./resource
 BIN = ./bin
 SRC = ./src
-DESTDIR = /opt/skype_unofficial_client/
+DESTDIR = /opt/skype_unofficial_client
+SHARE_APPS_DIR = /usr/share/applications
+SHARE_APPS_FILE = $(SHARE_APPS_DIR)/skype-desktop.desktop
+SYS_BIN_DIR = /usr/bin
+SYS_BIN_FILE = $(SYS_BIN_DIR)/skype-desktop
 PREFIX = 
 
 linux_x64: create_bin create_link_to_lib_if_exists create_desktop_shortcut
 	mkdir -p $(PREFIX)$(DESTDIR)/js || echo "Skip"
-	mkdir -p $(PREFIX)/usr/share/applications || echo "Skip"
 	cp -p -f $(SRC)/package.json $(PREFIX)$(DESTDIR)/
 	cp -p -f $(SRC)/skype.html $(PREFIX)$(DESTDIR)/
-	cp -p -f -R $(BIN)/linux_x64/* $(PREFIX)$(DESTDIR)
+	cp -p -f -R $(BIN)/linux_x64/* $(PREFIX)$(DESTDIR)/
 	cp -p -f -R $(SRC)/js/* $(PREFIX)$(DESTDIR)/js
 	cp -p -f -R $(RESOURCE)/skypeweb/* $(PREFIX)$(DESTDIR)/
 	chmod +x $(PREFIX)$(DESTDIR)/skype
 	
 linux_x86: create_bin create_link_to_lib_if_exists create_desktop_shortcut
 	mkdir -p $(PREFIX)$(DESTDIR)/js || echo "Skip"
-	mkdir -p $(PREFIX)/usr/share/applications || echo "Skip"
 	cp -p -f $(SRC)/package.json $(PREFIX)$(DESTDIR)/
 	cp -p -f $(SRC)/skype.html $(PREFIX)$(DESTDIR)/
-	cp -p -f -R $(BIN)/linux_x86/* $(PREFIX)$(DESTDIR)
+	cp -p -f -R $(BIN)/linux_x86/* $(PREFIX)$(DESTDIR)/
 	cp -p -f -R $(SRC)/js/* $(PREFIX)$(DESTDIR)/js
 	cp -p -f -R $(RESOURCE)/skypeweb/* $(PREFIX)$(DESTDIR)/
 	chmod +x $(PREFIX)$(DESTDIR)/skype
@@ -31,27 +33,27 @@ linux_x86: create_bin create_link_to_lib_if_exists create_desktop_shortcut
 
 create_bin:
 	mkdir -p $(PREFIX)$(DESTDIR) || echo "Skip"
-	mkdir -p $(PREFIX)/usr/bin || echo "Skip"
-	echo '#!/bin/sh' > $(PREFIX)/usr/bin/skype-desktop
-	echo "cd $(PREFIX)$(DESTDIR)" >> $(PREFIX)/usr/bin/skype-desktop
-	echo './skype --enable-spell-checking' >> $(PREFIX)/usr/bin/skype-desktop
-	chmod +x $(PREFIX)/usr/bin/skype-desktop
+	mkdir -p $(PREFIX)$(SYS_BIN_DIR) || echo "Skip"
+	echo '#!/bin/sh' > $(PREFIX)$(SYS_BIN_FILE)
+	echo "cd $(PREFIX)$(DESTDIR)" >> $(PREFIX)$(SYS_BIN_FILE)
+	echo './skype --enable-spell-checking' >> $(PREFIX)$(SYS_BIN_FILE)
+	chmod +x $(PREFIX)$(SYS_BIN_FILE)
 
 
 create_desktop_shortcut:
-	mkdir -p $(PREFIX)/usr/share/applications/ || echo "Skip"
-	echo "[Desktop Entry]" > $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Version=1.0" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Type=Application" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Name=Skype" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Comment=An unofficial client of Skype for Linux, running on top of Node Webkit." >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Icon=$(PREFIX)/opt/skype_unofficial_client/skype.png" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Exec=$(PREFIX)/opt/skype_unofficial_client/skype --enable-spell-checking %U" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "StartupWMClass=crx_monljlleikpphbhopghghdbggidfahha" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "NoDisplay=false" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Categories=Network;" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "StartupNotify=false" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
-	echo "Terminal=false" >> $(PREFIX)/usr/share/applications/skype-desktop.desktop
+	mkdir -p $(PREFIX)$(SHARE_APPS_DIR) || echo "Skip"
+	echo "[Desktop Entry]" > $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Version=1.0" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Type=Application" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Name=Skype" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Comment=An unofficial client of Skype for Linux, running on top of Node Webkit." >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Icon=$(PREFIX)/opt/skype_unofficial_client/skype.png" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Exec=$(PREFIX)/opt/skype_unofficial_client/skype --enable-spell-checking %U" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "StartupWMClass=crx_monljlleikpphbhopghghdbggidfahha" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "NoDisplay=false" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Categories=Network;" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "StartupNotify=false" >> $(PREFIX)$(SHARE_APPS_FILE)
+	echo "Terminal=false" >> $(PREFIX)$(SHARE_APPS_FILE)
 
 
 create_link_to_lib_if_exists:
