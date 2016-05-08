@@ -12,24 +12,23 @@ SYS_BIN_DIR = /usr/bin
 SYS_BIN_FILE = $(SYS_BIN_DIR)/skype-desktop
 PREFIX = 
 
-linux_x64: create_bin create_link_to_lib_if_exists create_desktop_shortcut
-	mkdir -p $(PREFIX)$(DESTDIR)/js || echo "Skip"
-	cp -p -f $(SRC)/package.json $(PREFIX)$(DESTDIR)/
-	cp -p -f $(SRC)/skype.html $(PREFIX)$(DESTDIR)/
+linux_x64: create_bin create_link_to_lib_if_exists create_desktop_shortcut copy_source
+	mkdir -p $(PREFIX)$(DESTDIR) || echo "Skip"
 	cp -p -f -R $(BIN)/linux_x64/* $(PREFIX)$(DESTDIR)/
-	cp -p -f -R $(SRC)/js/* $(PREFIX)$(DESTDIR)/js
-	cp -p -f -R $(RESOURCE)/skypeweb/* $(PREFIX)$(DESTDIR)/
 	chmod +x $(PREFIX)$(DESTDIR)/skype
 	
-linux_x86: create_bin create_link_to_lib_if_exists create_desktop_shortcut
+linux_x86: create_bin create_link_to_lib_if_exists create_desktop_shortcut copy_source
+	mkdir -p $(PREFIX)$(DESTDIR) || echo "Skip"
+	cp -p -f -R $(BIN)/linux_x86/* $(PREFIX)$(DESTDIR)/
+	chmod +x $(PREFIX)$(DESTDIR)/skype
+
+copy_source:
 	mkdir -p $(PREFIX)$(DESTDIR)/js || echo "Skip"
 	cp -p -f $(SRC)/package.json $(PREFIX)$(DESTDIR)/
 	cp -p -f $(SRC)/skype.html $(PREFIX)$(DESTDIR)/
-	cp -p -f -R $(BIN)/linux_x86/* $(PREFIX)$(DESTDIR)/
 	cp -p -f -R $(SRC)/js/* $(PREFIX)$(DESTDIR)/js
 	cp -p -f -R $(RESOURCE)/skypeweb/* $(PREFIX)$(DESTDIR)/
-	chmod +x $(PREFIX)$(DESTDIR)/skype
-
+	
 
 create_bin:
 	mkdir -p $(PREFIX)$(DESTDIR) || echo "Skip"
