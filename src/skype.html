@@ -15,11 +15,12 @@
     <script> 
       var gui = require('nw.gui');                  // Load native UI library
       var win = gui.Window.get();                  // Reference to window and tray
+      var trayAlwaysVisible = true;
     </script>   
     <script src='./js/target.js'></script>     
     <script src='./js/tray.js'></script>   
   </head>
   <body>
-    <iframe src="https://web.skype.com/en" nwdisable nwfaketop></iframe>
+    <iframe id="skypeWebFrame" src="https://web.skype.com" nwdisable nwfaketop></iframe>
   </body>
 </html>
