@@ -12,14 +12,14 @@
         height: 100%;
       }
     </style>
-    <script> 
+    <script>
       var gui = require('nw.gui');                  // Load native UI library
       var win = gui.Window.get();                  // Reference to window and tray
       var trayAlwaysVisible = true;
       var minimizeWhenCloseByX = true;
-    </script>   
-    <script src='./js/target.js'></script>     
-    <script src='./js/tray.js'></script>   
+    </script>
+    <script src='./js/target.js'></script>
+    <script src='./js/tray.js'></script>
   </head>
   <body>
     <iframe id="skypeWebFrame" src="https://web.skype.com" nwdisable nwfaketop></iframe>
