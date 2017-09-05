@@ -3,6 +3,8 @@ Skype Unofficial Client
 # Deprecated
 See: https://github.com/haskellcamargo/skype-unofficial-client/issues/65
 
+<a href="https://app.codesponsor.io/link/osmbVLutaA7HXKYJpSN5uQYQ/haskellcamargo/skype-unofficial-client" rel="nofollow"><img src="https://app.codesponsor.io/embed/osmbVLutaA7HXKYJpSN5uQYQ/haskellcamargo/skype-unofficial-client.svg" style="width: 888px; height: 68px;" alt="Sponsor" /></a>
+
 ##### What is this?
 
 An unofficial client of Skype for Linux, running on top of Node Webkit.
